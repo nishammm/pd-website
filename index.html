@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            /* font-family: Arial, Helvetica, sans-serif; */
+            max-width: 1280px;
+            margin: 0 auto !important;
+            scroll-behavior: smooth;
+        }
+
+        input,
+        textarea,
+        form,
+        button {
+            display: block;
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            background-color: #eeeeee;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem !important;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+
+        form label {
+            font-size: 14px !important;
+        }
+
+        label p {
+            margin-bottom: 8px;
+        }
+
+        .submit {
+            background-color: #1e3149;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .form-success,
+        .form-failed {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: white;
+        }
+
+        .form-success {
+            background-color: rgb(85, 184, 85);
+        }
+
+        .form-failed {
+            background-color: rgb(228, 103, 103);
+        }
+    </style>
+</head>
+<body>
+    <div class='pt-5 pb-10 px-4 lg:px-20'>
+        <!-- {/* header */} -->
+        <div class='flex items-center sticky top-0 bg-white py-5'>
+            <div class='font-bold text-xl text-[#2A4768]'>AI Solutions</div>
+            <div class='ml-auto flex items-center gap-4 text-[#1E3149] text-sm font-medium'>
+                <a class='hover:opacity-50' href='#banner'>
+                    Home
+                </a>
+                <a class='hover:opacity-50' href='#services'>
+                    Services
+                </a>
+                <a class='hover:opacity-50' href='#events'>
+                    Events
+                </a>
+                <a class='hover:opacity-50' href='#gallery'>
+                    Gallery
+                </a>
+                <a class='hover:opacity-50' href='#contact-us'>
+                    Contact us
+                </a>
+            </div>
+        </div>
+
+        <!-- {/* banner */} -->
+        <img
+            id='banner'
+            class='w-full mt-10'
+            src='./images/banner.jpg'
+            alt='banner'
+            width='1120'
+            height='644'
+            priority
+        />
+
+        <!-- {/* services */} -->
+        <div id='services'>
+            <div class='font-bold text-xl text-center mt-20'>Services</div>
+            <div class='mt-3 text-center text-sm'>
+                Empowering businesses with innovative AI tools
+            </div>
+            <div class='flex gap-5 mt-10 [&_*]:w-full text-center [&_p]:mt-4 [&_p]:text-sm'>
+                <div>
+                    <Image
+                        src='./images/service-1.jpeg'
+                        alt='service 1'
+                        width={300}
+                        height={300}
+                        class=''
+                    />
+                    <p>Fast thinking</p>
+                </div>
+                <div>
+                    <Image
+                        src='./images/service-2.jpeg'
+                        alt='service 2'
+                        width={300}
+                        height={300}
+                    />
+                    <p>Better decision making</p>
+                </div>
+                <div>
+                    <Image
+                        src='./images/service-3.jpeg'
+                        alt='service 3'
+                        width={300}
+                        height={300}
+                    />
+                    <p>Better results</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- {/* upcoming events */} -->
+        <div id='events'>
+            <p class='text-xl text-center mt-20 font-bold'>Upcoming events</p>
+            <div class='mt-10 flex items-center [&_div]:w-full [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_div]:gap-2 [&_p]:text-sm [&_p+p]:text-xs'>
+                <div>
+                    <Image
+                        src='./images/event-1.png'
+                        alt='upcoming 1'
+                        width={100}
+                        height={100}
+                    />
+                    <p>Design submit</p>
+                    <p>Jan 15, 2022</p>
+                </div>
+                <div>
+                    <Image
+                        src='./images/event-2.png'
+                        alt='upcoming 1'
+                        width={100}
+                        height={100}
+                    />
+                    <p>Design submit</p>
+                    <p>Jan 15, 2022</p>
+                </div>
+                <div>
+                    <Image
+                        src='/images/event-3.png'
+                        alt='upcoming 1'
+                        width={100}
+                        height={100}
+                    />
+                    <p>Design submit</p>
+                    <p>Jan 15, 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- {/* gallery */} -->
+        <div id='gallery'>
+            <p class='text-xl text-center mt-20 font-bold'>Gallery</p>
+            <Image
+                src='/images/gallery-1.jpg'
+                alt='gallery 1'
+                width={1280}
+                height={526}
+                class='w-full h-auto mt-10'
+            />
+            <Image
+                src='/images/gallery-2.jpg'
+                alt='gallery 2'
+                width={1280}
+                height={526}
+                class='w-full h-auto mt-4'
+            />
+        </div>
+
+        <!-- {/* customer feedback */} -->
+        <div id='feedback'>
+            <p class='text-xl text-center mt-20 font-bold'>Customer feedback</p>
+            <div class='mt-10 flex flex-col items-center gap-3'>
+                <Image
+                    src='./images/avatar.jpg'
+                    alt='avatar'
+                    width={100}
+                    height={100}
+                />
+                <p class='font-semibold text-sm'>
+                    Blake Weston, Find Fill Storage
+                </p>
+                <div class='flex items-center gap-5'>
+                    <Image src='./images/star.svg' alt='star' width={32} height={32} />
+                    <Image src='./images/star.svg' alt='star' width={32} height={32} />
+                    <Image src='./images/star.svg' alt='star' width={32} height={32} />
+                    <Image src='./images/star.svg' alt='star' width={32} height={32} />
+                    <Image src='./images/star.svg' alt='star' width={32} height={32} />
+                </div>
+                <p class='max-w-[516px] text-center'>
+                    AI solutions do high-quality work in the allotted timeframe. They
+                    maintain clear and consistent communication, providing updates on
+                    key project components and listening to feedback. There are numerous
+                    different stages, processes, and statuses in our project which made
+                    the work very complicated, but AI solutions worked it all out.
+                </p>
+            </div>
+        </div>
+
+        <!-- {/* contact us */} -->
+        <section>
+            <div class="">
+              <h2 class="font-bold text-xl text-center mt-20">Contact me</h2>
+              <p class="text-center text-sm mt-4">
+                Get in touch with us for inquiries or collaborations
+              </p>
+            </div>
+        
+            <form id="contactForm">
+              <label>
+                <p>Name</p>
+                <input type="text" name="name" class="" required>
+              </label>
+              <label>
+                <p>Email</p>
+                <input type="email" name="email" class="" required>
+              </label>
+              <label>
+                <p>Phone</p>
+                <input type="text" name="phone" class="" required>
+              </label>
+              <label>
+                <p>Company name</p>
+                <input type="text" name="companyName" class="" required>
+              </label>
+              <label>
+                <p>Job title</p>
+                <input type="text" name="jobTitle" class="" required>
+              </label>
+              <label>
+                <p>Job details</p>
+                <input type="text" name="jobDetails" class="" required>
+              </label>
+              <label>
+                <p>Country</p>
+                <input type="text" name="country" class="" required>
+              </label>
+              <label>
+                <p>Subject</p>
+                <input type="text" name="subject" class="" required>
+              </label>
+              <label>
+                <p>Message</p>
+                <textarea name="message" class="" cols="30" rows="4" required></textarea>
+              </label>
+              <button type="submit" class="submit">Submit</button>
+            </form>
+        
+            <div id="formStatus"></div>
+        </section>
+
+        <div class='mt-20 flex items-center justify-between'>
+            <p>© 2024 AI Solution. All Rights Reserved.</p>
+            <p>Privacy policy</p>
+            <p>Terms of use</p>
+        </div>
+    </div>  
+
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementsByClassName('submit')
+        const formStatus = document.getElementById('formStatus');
+    
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+    
+          const formData = new FormData(form);
+          const payload = new URLSearchParams();
+          formData.forEach((value, key) => {
+            payload.append(key, value);
+          });
+
+          payload.append('form-name', 'contact');
+          payload.append('bot-field', '');
+
+          try {
+            submitBtn.innerHTML = 'Submitting...';
+            const response = await fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: payload.toString()
+            });
+    
+            if (response.ok) {
+              form.reset();
+              formStatus.innerHTML = `
+                <p class="form-success">
+                  Form submitted successfully 
+                  <img src="./images/exit.svg" alt="Exit icon" width="16" height="16" onclick="exitModal()">
+                </p>`;
+            } else {
+                formStatus.innerHTML = `
+                    <p class="form-failed">
+                        Form submission failed 
+                        <img src="./images/exit.svg" alt="Exit icon" width="16" height="16" onclick="exitModal()">
+                    </p>`;
+            }
+          } catch (error) {
+            console.error(error);   
+            formStatus.innerHTML = `
+              <p class="form-failed">
+                Form submission failed 
+                <img src="./images/exit.svg" alt="Exit icon" width="16" height="16" onclick="exitModal()">
+              </p>`;
+          }
+        });
+    
+        function exitModal() {
+          formStatus.innerHTML = '';
+        }
+      </script>
+</body>
+</html>
